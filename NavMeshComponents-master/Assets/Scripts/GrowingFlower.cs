@@ -6,11 +6,13 @@ public class GrowingFlower : MonoBehaviour
 {
     private Vector3 budSpawn;
     private Vector3 offsetBud;
+    private GameObject growingFlower;
     
     // Start is called before the first frame update
     void Start()
     {
         offsetBud = new Vector3(0,.10f,0);
+        growingFlower = GameObject.Find("Flowers");
     }
 
     // Update is called once per frame
@@ -32,8 +34,10 @@ public class GrowingFlower : MonoBehaviour
         }
 
         budSpawn += offsetBud;
-        
-        GameObject newBud = Instantiate(Resources.Load<GameObject>("Prefabs/BudFlower"));
-        newBud.transform.position = budSpawn;
+
+        //GameObject newBud = Instantiate(Resources.Load<GameObject>("Prefabs/BudFlower"));
+        //Instantiate it under a parent so we can save that parent moving between scenes 
+        GameObject newBud = Instantiate(Resources.Load<GameObject>("Prefabs/BudFlower"), budSpawn, Quaternion.identity,  growingFlower.transform);
+        //newBud.transform.position = budSpawn;
     }
 }

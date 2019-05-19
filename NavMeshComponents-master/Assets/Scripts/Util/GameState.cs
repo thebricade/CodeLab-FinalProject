@@ -18,6 +18,8 @@ public class GameState : MonoBehaviour
     public static GameState instance;
 
     public List<int> harvestedFlowers;
+
+    private GameObject growingFlower;
     
     // Start is called before the first frame update
     void Start()
@@ -43,12 +45,26 @@ public class GameState : MonoBehaviour
     {
         Debug.Log("Change state running");
         switch (currentState)
-        {
-         
+        { 
            case "Garden":
                SceneManager.LoadScene("Garden");
+               if (growingFlower == null)
+               {
+                   growingFlower = GameObject.Find("Flowers");
+               }
+               else
+               {
+                   growingFlower.SetActive(true);
+               }
                break;
-           
+           case "Dino":
+               if (growingFlower == null)
+               {
+                   growingFlower = GameObject.Find("Flowers");
+               }    
+                   growingFlower.SetActive(false);
+               SceneManager.LoadScene("Dino");
+               break;
         }
     }
 
@@ -57,4 +73,11 @@ public class GameState : MonoBehaviour
         harvestedFlowers.Add(1);
         //Debug.Log("ran addFlower");
     }
+
+    public void removeFlower()
+    {
+        harvestedFlowers.Remove(1);
+    }
+    
+    
 }
