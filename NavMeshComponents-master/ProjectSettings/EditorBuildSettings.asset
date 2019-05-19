@@ -4,4 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 048a914866bbedc45a8de154cd7ac389
+  - enabled: 1
+    path: Assets/Scenes/Garden.unity
+    guid: afb4544d7e9d04843b49538611367c50
+  - enabled: 1
+    path: Assets/Scenes/Dino.unity
+    guid: 5592a1523389fd24787d20a32d7a042a
+  m_configObjects: {}
