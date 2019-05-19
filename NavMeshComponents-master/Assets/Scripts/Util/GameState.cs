@@ -17,7 +17,7 @@ public class GameState : MonoBehaviour
 {
     public static GameState instance;
 
-   // private GamePlace currentState;
+    public List<int> harvestedFlowers;
     
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class GameState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       // Debug.Log(harvestedFlowers.Count);
     }
 
     public void ChangeState(string currentState)
@@ -51,5 +51,10 @@ public class GameState : MonoBehaviour
            
         }
     }
-    
+
+    public void addFlower()
+    {
+        harvestedFlowers.Add(1);
+        //Debug.Log("ran addFlower");
+    }
 }

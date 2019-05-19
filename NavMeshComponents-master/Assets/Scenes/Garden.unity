@@ -181,75 +181,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &294483117
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5183955030733063095, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_Name
-      value: BudFlower
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.188
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.43855152
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.89870614
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 52.023003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704052214375651110, guid: f01c6730c7f039847ad8d4b1bb636e2c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f01c6730c7f039847ad8d4b1bb636e2c, type: 3}
 --- !u!1 &860231261
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +297,7 @@ GameObject:
   - component: {fileID: 1361111710}
   - component: {fileID: 1361111709}
   m_Layer: 0
-  m_Name: GameManger
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2777fd3258e90ee4bb4944eb5315a837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  harvestedFlowers: 
 --- !u!4 &1361111710
 Transform:
   m_ObjectHideFlags: 0
