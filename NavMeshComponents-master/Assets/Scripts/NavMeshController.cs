@@ -7,8 +7,14 @@ public class NavMeshController : MonoBehaviour
 {
     public Vector3 destination = new Vector3(1, 0, 2);
     private Vector3 oldDest;
+    
+    //saving happiness score 
+    public float happyDino; 
 
     private NavMeshAgent agent;
+
+    //so that you can call update score
+    public GameObject displayScore;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +23,9 @@ public class NavMeshController : MonoBehaviour
         agent.SetDestination(destination);
 
         oldDest = destination;
+
+        happyDino = 0f;
+
     }
 
     // Update is called once per frame
@@ -48,6 +57,9 @@ public class NavMeshController : MonoBehaviour
         {
             Destroy(other.gameObject);
             Debug.Log("I hit a flower");
+            //Dino Care goes up instantiate a little heart
+            happyDino++;
+            displayScore.GetComponent<DisplayingScore>().UpdateText();
         }
         
     }
@@ -57,7 +69,6 @@ public class NavMeshController : MonoBehaviour
     private void OnMouseDown() //this is if the mouse collids with the Dino 
     {
         Debug.Log("MouseDown Called");
-        //Dino Care goes up instantiate a little heart
         
     }
 }
