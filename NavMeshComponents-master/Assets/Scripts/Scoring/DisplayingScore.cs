@@ -18,6 +18,7 @@ public class DisplayingScore : MonoBehaviour
         displayScore = dinoScore.GetComponent<Text>();
         
         happyFloat = dino.GetComponent<NavMeshController>().happyDino;
+        happyFloat = PlayerPrefs.GetFloat("Happy");
         displayScore.text = "This is how happy your dino is " + happyFloat;
     }
 

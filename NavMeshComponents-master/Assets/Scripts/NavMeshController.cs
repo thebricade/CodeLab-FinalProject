@@ -24,7 +24,7 @@ public class NavMeshController : MonoBehaviour
 
         oldDest = destination;
 
-        happyDino = 0f;
+        happyDino = PlayerPrefs.GetFloat("Happy");
 
     }
 
@@ -60,6 +60,8 @@ public class NavMeshController : MonoBehaviour
             //Dino Care goes up instantiate a little heart
             happyDino++;
             displayScore.GetComponent<DisplayingScore>().UpdateText();
+            PlayerPrefs.SetFloat("Happy",happyDino);
+            PlayerPrefs.Save();
         }
         
     }
