@@ -11,8 +11,8 @@ public class GrowingFlower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        offsetBud = new Vector3(0,.10f,0);
-        growingFlower = GameObject.Find("Flowers");
+        offsetBud = new Vector3(0,.20f,0);
+        growingFlower = GameObject.Find("Flowers"); //parent 
     }
 
     // Update is called once per frame

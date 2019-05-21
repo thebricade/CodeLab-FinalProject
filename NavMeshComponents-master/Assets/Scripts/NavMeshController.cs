@@ -59,9 +59,11 @@ public class NavMeshController : MonoBehaviour
             Debug.Log("I hit a flower");
             //Dino Care goes up instantiate a little heart
             happyDino++;
-            displayScore.GetComponent<DisplayingScore>().UpdateText();
             PlayerPrefs.SetFloat("Happy",happyDino);
             PlayerPrefs.Save();
+            displayScore.GetComponent<DisplayingScore>().UpdateText();
+            displayScore.GetComponent<DisplayingScore>().SpawnPhotographer();
+            
         }
         
     }
